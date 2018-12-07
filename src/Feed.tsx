@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { Earth, Cacti } from './Photography';
-import { Rows, Cam } from './Sketches';
+import { Rows, Cam, Brain, Numbers } from './Sketches';
 import { Breaks } from './Music';
 
 const handleViewport = require('react-in-viewport').default;
@@ -9,7 +9,7 @@ const handleViewport = require('react-in-viewport').default;
 export const Feed: React.SFC = () => (
     <React.Fragment>
         {
-            [Breaks, Rows, Cacti, Cam, Earth]
+            [Numbers, Brain, Breaks, Cacti, Rows, Earth, Cam]
                 .map(
                     (Component, i) => {
                         const WithViewport = handleViewport(Component);

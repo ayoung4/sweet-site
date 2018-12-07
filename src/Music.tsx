@@ -12,13 +12,13 @@ export const Breaks: React.SFC = () => (
             playlist={[
                 {
                     url: `${process.env.PUBLIC_URL}/photos/rock-2.jpg`,
-                    cover: `${process.env.PUBLIC_URL}/photos/rock-2.jpg`,
+                    cover: `${process.env.PUBLIC_URL}/covers/lynx.jpg`,
                     title: 'Breakz',
                     artist: [
                         'a young',
                     ],
                 }
-            ]}
+             ]}
         />
     </section>
 );
