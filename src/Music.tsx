@@ -22,3 +22,24 @@ export const Breaks: React.SFC = () => (
         />
     </section>
 );
+
+export const Pixel: React.SFC = () => (
+    <section>
+        <MusicPlayer
+            style={{
+                marginLeft: 'auto',
+                marginRight: 'auto',
+            }}
+            playlist={[
+                {
+                    url: `${process.env.PUBLIC_URL}/photos/rock-2.jpg`,
+                    cover: `${process.env.PUBLIC_URL}/covers/pixel.jpg`,
+                    title: 'Pixel',
+                    artist: [
+                        'a young',
+                    ],
+                }
+             ]}
+        />
+    </section>
+);

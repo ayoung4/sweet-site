@@ -2,22 +2,32 @@ import * as React from 'react';
 
 import { Earth, Cacti } from './Photography';
 import { Rows, Cam, Brain, Numbers } from './Sketches';
-import { Breaks } from './Music';
+import { Pixel, Breaks } from './Music';
 
 const handleViewport = require('react-in-viewport').default;
+
+const items = [
+    Pixel,
+    Numbers,
+    Breaks,
+    Brain,
+    Cacti,
+    Rows,
+    Earth,
+    Cam,
+];
 
 export const Feed: React.SFC = () => (
     <React.Fragment>
         {
-            [Numbers, Brain, Breaks, Cacti, Rows, Earth, Cam]
-                .map(
-                    (Component, i) => {
-                        const WithViewport = handleViewport(Component);
-                        return (
-                            <WithViewport key={i} />
-                        );
-                    }
-                )
+            items.map(
+                (Component, i) => {
+                    const WithViewport = handleViewport(Component);
+                    return (
+                        <WithViewport key={i} />
+                    );
+                }
+            )
         }
     </React.Fragment>
 );
